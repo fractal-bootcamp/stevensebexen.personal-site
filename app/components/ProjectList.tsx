@@ -30,16 +30,24 @@ export default function ProjectList(props: ProjectListProps) {
 
   }
 
+  function incrementProjectIndex() {
+    setCurrentProjectIndex(wrapProjectIndex(currentProjectIndex + 1));
+  }
+
+  function decrementProjectIndex() {
+    setCurrentProjectIndex(wrapProjectIndex(currentProjectIndex - 1));
+  }
+
   return (
     <div>
       <div className="grid grid-cols-3 gap-6">
-        <ProjectListTileInactive project={props.projectList.projects[wrapProjectIndex(currentProjectIndex - 1)]} />
+        <ProjectListTileInactive project={props.projectList.projects[wrapProjectIndex(currentProjectIndex - 1)]} onClick={decrementProjectIndex} />
         <ProjectListTile project={props.projectList.projects[wrapProjectIndex(currentProjectIndex)]} />
-        <ProjectListTileInactive project={props.projectList.projects[wrapProjectIndex(currentProjectIndex + 1)]} />
+        <ProjectListTileInactive project={props.projectList.projects[wrapProjectIndex(currentProjectIndex + 1)]} onClick={incrementProjectIndex} />
       </div>
       <div className="flex flex-row mx-auto my-4 justify-between w-1/4">
-        <button className="text-2xl py-1 px-2 bg-slate-200 hover:bg-slate-400" onClick={() => setCurrentProjectIndex(wrapProjectIndex(currentProjectIndex - 1))}>Left</button>
-        <button className="text-2xl py-1 px-2 bg-slate-200 hover:bg-slate-400" onClick={() => setCurrentProjectIndex(wrapProjectIndex(currentProjectIndex + 1))}>Right</button>
+        <button className="text-2xl py-1 px-2 bg-slate-200 hover:bg-slate-400" onClick={decrementProjectIndex}>Left</button>
+        <button className="text-2xl py-1 px-2 bg-slate-200 hover:bg-slate-400" onClick={incrementProjectIndex}>Right</button>
       </div>
     </div>
   );
