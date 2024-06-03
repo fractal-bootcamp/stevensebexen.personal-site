@@ -1,6 +1,8 @@
 import type { MetaFunction } from "@remix-run/node";
 import { Link } from "@remix-run/react"
 
+import bgDefault from "~/img/bg-default.webp"; 
+
 export const meta: MetaFunction = () => {
   return [
     { title: "New Remix App" },
@@ -10,13 +12,14 @@ export const meta: MetaFunction = () => {
 
 export default function Index() {
   return (
-    <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.8" }}>
-      <h1 className="text-3xl">Steven Sebexen</h1>
-      <img width="200" src="https://static.wikia.nocookie.net/forgottenrealms/images/8/84/Monster_Manual_5e_-_Dragon%2C_Red_-_p97.jpg"></img>
-      <p>Hi, I'm Steven. I make stuff.</p>
-      <div>
-        <h2 className="">Helpful links:</h2>
-        <Link to="/about">About Me</Link>
+    <div className="bg-cover bg-[url('{bgDefault}')]">
+      <div className="mx-auto w-1/4 my-4 bg-slate-400/50">
+        <h1 className="text-lg text-center">Steven Sebexen</h1>
+      </div>
+      <div className="mx-auto w-2/3 bg-slate-400/50">
+        <p className="text-center">Hi, I'm Steven. I make stuff.</p>
+        <p>Helpful links:</p>
+        <p><Link to="/about">About Me</Link></p>
       </div>
     </div>
   );
