@@ -1,8 +1,10 @@
+import { MouseEventHandler } from "react";
+
 import Project from "~/interfaces/Project";
 
 interface ProjectListTileProps {
   project: Project
-  onClick?: Function
+  onClick?: MouseEventHandler<HTMLDivElement>
 }
 
 export default function ProjectListTileInactive(props: ProjectListTileProps) {
