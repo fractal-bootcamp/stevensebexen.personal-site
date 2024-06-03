@@ -1,0 +1,28 @@
+{
+  "projects": [
+    {
+      "name": "Apple Farmer",
+      "imgUrl": "/img/project1.jpeg",
+      "description": "Become a farmer in the Wild West and grow the biggest, best apples!",
+      "projectUrl": "example.org"
+    },
+    {
+      "name": "Cow Brusher",
+      "imgUrl": "/img/project2.webp",
+      "description": "Become a brusher in the Wild West and brush the cutest, fluffiest cows!",
+      "projectUrl": "example.org"
+    },
+    {
+      "name": "Barn Raiser",
+      "imgUrl": "/img/project3.jpeg",
+      "description": "Become a raiser in the Wild West and raise the reddest, woodiest barn!",
+      "projectUrl": "example.org"
+    },
+    {
+      "name": "Corn Popper",
+      "imgUrl": "/img/project4.jpeg",
+      "description": "Become a popper in the Wild West and pop the poppiest, poppiest corn!",
+      "projectUrl": "example.org"
+    }
+  ]
+}
