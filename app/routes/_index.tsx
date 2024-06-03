@@ -1,8 +1,6 @@
 import { Link } from "@remix-run/react"
 import type { MetaFunction } from "@remix-run/node";
 
-import { useState } from "react";
-
 export const meta: MetaFunction = () => {
   return [
     { title: "New Remix App" },
