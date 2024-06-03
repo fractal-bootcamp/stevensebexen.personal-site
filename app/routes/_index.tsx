@@ -1,5 +1,6 @@
 import { Link } from "@remix-run/react"
 import type { MetaFunction } from "@remix-run/node";
+import { useState } from "react";
 
 export const meta: MetaFunction = () => {
   return [
@@ -9,10 +10,12 @@ export const meta: MetaFunction = () => {
 };
 
 export default function Index() {
+
+  const [ contactMouseover, setContactMouseover ] = useState(false);
   return (
     <div>
       <h1 className="text-5xl text-center">Steven Sebexen</h1>
-      <img className="mx-auto w-32" src="/img/bg-default.webp"></img>
+      <img className="mx-auto w-32" src="/img/bg-default.webp" alt="A red dragon."></img>
       <div className="mx-auto my-4 w-2/3 bg-slate-200">
         <p className="text-center">Hi, I'm Steven. I make stuff. This is my placeholder dragon. Do you like him?</p>
       </div>
@@ -32,9 +35,9 @@ export default function Index() {
             <p className="m-auto text-white text-3xl">GitHub</p>
           </div>
         </a>
-        <div className="mx-8 my-4 hover:m-0">
+        <div className="mx-8 my-4 hover:m-0" onMouseOver={() => setContactMouseover(true)} onMouseOut={() => setContactMouseover(false)}>
           <div className="flex items-center w-full h-full bg-lime-600">
-            <p className="m-auto text-white text-3xl">Contact</p>
+            <p className="m-auto text-white text-3xl">{contactMouseover ? 'No' : 'Contact'}</p>
           </div>
         </div>
       </div>
