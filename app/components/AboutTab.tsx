@@ -8,13 +8,13 @@ interface AboutTabProps {
 }
 
 const STYLE_ACTIVE = 'select-none rounded-2xl flex-1 py-2 text-center bg-[#D82D6E]';
-const STYLE_INACTIVE = 'select-none flex-1 py-2 text-center bg-[#00000000] hover:bg-[#D82D6E]';
+const STYLE_INACTIVE = 'select-none flex-1 py-2 text-center bg-[#F9C4C000] hover:bg-[#D82D6E]';
 
 export default function AboutTab(props: AboutTabProps) {
 
   return (
     <span className={props.tabId == props.currentTab ? STYLE_ACTIVE : STYLE_INACTIVE} onClick={() => props.onClick(props.tabId)}
-      style={{ transitionProperty: 'background-color, border-radius', transitionDuration: '150ms' }}>
+      style={{ transitionProperty: 'background-color, border-radius', transitionDuration: '250ms' }}>
       <p>{props.label}</p>
     </span>
   );
