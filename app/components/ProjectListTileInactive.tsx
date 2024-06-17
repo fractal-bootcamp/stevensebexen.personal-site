@@ -9,10 +9,10 @@ interface ProjectListTileProps {
 
 export default function ProjectListTileInactive(props: ProjectListTileProps) {
   return (
-    <div className="h-64 bg-slate-400/50 opacity-50 cursor-pointer hover:bg-slate-600/50" onClick={() => props.onClick()}>
-      <p className="text-center">{props.project.name}</p>
-      <img className="mx-auto h-1/2" src={props.project.imgUrl} alt={props.project.imgAlt}></img>
-      <p>{props.project.description}</p>
+    <div className="flex flex-1 h-full bg-slate-400/50 p-2 opacity-50 cursor-pointer hover:bg-slate-600/50 overflow-clip hidden sm:block" onClick={() => props.onClick()}>
+      <p className="flex-0 text-center">{props.project.name}</p>
+      <img className="max-h-1/2 object-cover aspect-video" src={props.project.imgUrl} alt={props.project.imgAlt}></img>
+      <p className="flex-0 basis-1/4">{props.project.description}</p>
     </div>
   );
 }
