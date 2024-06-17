@@ -1,4 +1,4 @@
-export default interface Project {
+export default interface ProjectOld {
   name: string
   imgUrl: string
   imgAlt: string

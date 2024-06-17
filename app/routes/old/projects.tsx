@@ -1,8 +1,8 @@
 import { Link } from "@remix-run/react";
 
-import ProjectList from "~/components/ProjectList";
+import ProjectList from "~/components/old/ProjectList";
 
-import projectListDefault from "~/data/projects.json";
+import projectListDefault from "~/data/projects_old.json";
 
 export default function Projects() {
   return (
