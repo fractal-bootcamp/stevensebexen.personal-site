@@ -3,7 +3,7 @@ import { Project } from "~/data/projects"
 
 interface ProjectCarouselTileProps {
   project: Project;
-  onProjectSelected: (projectId: Project) => void;
+  onProjectSelected: (project: Project) => void;
 }
 export default function ProjectCarouselTile(props: ProjectCarouselTileProps) {
   return (
