@@ -30,8 +30,8 @@ export default function About() {
         <AboutTab tabId={2} label='Music' currentTab={currentTab} onClick={clickHandler} />
         <AboutTab tabId={3} label='Me IRL' currentTab={currentTab} onClick={clickHandler} />
       </div>
-      <div className="flex flex-1 ">
-        <div className="flex-1 m-[5%] p-3 rounded-xl drop-shadow-md bg-[#ffffff88]">
+      <div className="flex flex-1 overflow-y-auto">
+        <div className="flex-1 m-[5%] p-3 overflow-y-auto rounded-xl drop-shadow-md bg-[#ffffff88]">
           {contentWindows[currentTab]}
           {currentTab === 1 && <ArtGallery imageUrls={loaderData?.imageUrls} />}
         </div>
