@@ -1,15 +1,15 @@
-import { Link } from "@remix-run/react";
-
-import ProjectList from "~/components/ProjectList";
-
-import projectListDefault from "~/data/projects.json";
-
-export default function Projects() {
+export default function Projects () {
   return (
-    <div className='flex flex-col h-screen justify-start'>
-      <h1 className="flex-0 text-center text-3xl">Projects</h1>
-      <p className='flex-0 p-2'>Don't worry, these are all totally real. Ready to go back? Go <Link className="text-violet-700" to="/">home.</Link></p>
-      <ProjectList projectList={projectListDefault} />
+    <div className='flex flex-col py-16 bg-gradient-to-t from-[#e76443] to-[#f9b175] h-screen w-screen place-items-center place-content-center'>
+      <div className='flex flex-1 w-3/4 max-w-[1024px] bg-[#ffffff88] min-h-full items-center'>
+        <div className='flex flex-1 basis-1/3'>
+
+        </div>
+        <div className='border-l-2 border-[#782112] h-4/5' />
+        <div className='flex-1 basis-2/3'>
+
+        </div>
+      </div>
     </div>
-  );
+  )
 }
