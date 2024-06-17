@@ -18,8 +18,6 @@ export default function About() {
     setCurrentTab(tabId);
   }
 
-  console.log(loaderData);
-
   return (
     <div className="flex flex-col h-screen bg-[#F9C4C0] bg-gradient-to-t from-[#F498A1] to-[#F9C4C0]">
       <div className="flex flex-row p-4 gap-4 w-screen">
