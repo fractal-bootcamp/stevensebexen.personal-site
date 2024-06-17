@@ -20,23 +20,23 @@ export default function Index() {
         <p className="text-center">Hi, I'm Steven. I make stuff. This is my placeholder dragon. Do you like him?</p>
       </div>
       <div className="grid grid-cols-2 grid-rows-2 h-96">
-        <Link className="mx-8 my-4 hover:m-0" to="/about">
-          <div className="flex items-center w-full h-full bg-red-500">
+        <Link className="mx-16 my-8 hover:m-2 transition-all duration-200" to="/about">
+          <div className="flex items-center w-full h-full bg-red-500 transition-all hover:rounded-3xl">
             <p className="m-auto text-white text-3xl">About</p>
           </div>
         </Link>
-        <Link className="mx-8 my-4 hover:m-0" to="/projects">
-          <div className="flex items-center w-full h-full bg-cyan-600">
+        <Link className="mx-16 my-8 hover:m-2 transition-all duration-200" to="/projects">
+          <div className="flex items-center w-full h-full bg-cyan-600 transition-all hover:rounded-3xl">
             <p className="m-auto text-white text-3xl">Projects</p>
           </div>
         </Link>
-        <a className="mx-8 my-4 hover:m-0" href="http://github.com/ssebexen">
-          <div className="flex items-center w-full h-full bg-violet-600">
+        <a className="mx-16 my-8 hover:m-2 transition-all duration-200" href="http://github.com/ssebexen">
+          <div className="flex items-center w-full h-full bg-violet-600 transition-all hover:rounded-3xl">
             <p className="m-auto text-white text-3xl">GitHub</p>
           </div>
         </a>
-        <div className="mx-8 my-4 hover:m-0" onMouseOver={() => setContactMouseover(true)} onMouseOut={() => setContactMouseover(false)}>
-          <div className="flex items-center w-full h-full bg-lime-600">
+        <div className="mx-16 my-8 hover:m-2 transition-all duration-200" onMouseOver={() => setContactMouseover(true)} onMouseOut={() => setContactMouseover(false)}>
+          <div className="flex items-center w-full h-full bg-lime-600 transition-all hover:rounded-3xl">
             <p className="m-auto text-white text-3xl">{contactMouseover ? 'No' : 'Contact'}</p>
           </div>
         </div>
