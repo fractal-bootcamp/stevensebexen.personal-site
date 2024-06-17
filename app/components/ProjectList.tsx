@@ -39,13 +39,13 @@ export default function ProjectList(props: ProjectListProps) {
   }
 
   return (
-    <div>
-      <div className="grid grid-cols-3 gap-6">
+    <div className='flex flex-0 basis-full flex-col justify-start'>
+      <div className="flex-0 basis- sm:grid sm:grid-cols-3 gap-6 px-6 my-4 items-center">
         <ProjectListTileInactive project={props.projectList.projects[wrapProjectIndex(currentProjectIndex - 1)]} onClick={decrementProjectIndex} />
         <ProjectListTile project={props.projectList.projects[wrapProjectIndex(currentProjectIndex)]} />
         <ProjectListTileInactive project={props.projectList.projects[wrapProjectIndex(currentProjectIndex + 1)]} onClick={incrementProjectIndex} />
       </div>
-      <div className="flex flex-row mx-auto my-4 justify-between w-1/4">
+      <div className="flex justify-center gap-6">
         <button className="text-2xl py-1 px-2 bg-slate-200 hover:bg-slate-400" onClick={decrementProjectIndex}>Left</button>
         <button className="text-2xl py-1 px-2 bg-slate-200 hover:bg-slate-400" onClick={incrementProjectIndex}>Right</button>
       </div>
