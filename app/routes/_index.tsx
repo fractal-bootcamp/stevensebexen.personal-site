@@ -21,12 +21,12 @@ export default function Index() {
       </div>
       <div className="grid flex-1 grid-cols-2 grid-rows-2 max-w-[1024px] w-full">
         <Link className="mx-4 md:mx-16 my-2 md:my-8 hover:m-2 transition-all duration-200" to="/about">
-          <div className="flex items-center w-full h-full bg-[#F498A1] transition-all hover:rounded-3xl drop-shadow-md">
+          <div className="flex items-center w-full h-full bg-[#fa829a] transition-all hover:rounded-3xl drop-shadow-md">
             <p className="m-auto text-white text-3xl">About</p>
           </div>
         </Link>
         <Link className="mx-4 md:mx-16 my-2 md:my-8 hover:m-2 transition-all duration-200" to="/projects">
-          <div className="flex items-center w-full h-full bg-orange-500 transition-all hover:rounded-3xl drop-shadow-md">
+          <div className="flex items-center w-full h-full bg-[#f2673d] transition-all hover:rounded-3xl drop-shadow-md">
             <p className="m-auto text-white text-3xl">Projects</p>
           </div>
         </Link>

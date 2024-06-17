@@ -1,4 +1,4 @@
-import Project from "~/interfaces/Project";
+import Project from "~/interfaces/ProjectOld";
 
 interface ProjectListTileProps {
   project: Project

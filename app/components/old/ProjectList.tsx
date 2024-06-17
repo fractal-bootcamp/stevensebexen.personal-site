@@ -1,8 +1,8 @@
 import { useState } from "react";
 
-import Project from "~/interfaces/Project";
-import ProjectListTile from "~/components/ProjectListTile";
-import ProjectListTileInactive from "~/components/ProjectListTileInactive";
+import Project from "~/interfaces/ProjectOld";
+import ProjectListTile from "~/components/old/ProjectListTile";
+import ProjectListTileInactive from "~/components/old/ProjectListTileInactive";
 
 interface ProjectList {
   projects: Array<Project>
