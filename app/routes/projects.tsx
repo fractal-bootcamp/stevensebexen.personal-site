@@ -23,7 +23,7 @@ export default function Projects () {
         <div className='flex flex-1 flex-col gap-12 basis-2/3 px-4 self-stretch'>
           <h2 className='text-4xl'>{selectedProject?.name}</h2>
           <p className='text-md'>{selectedProject?.longDescription}</p>
-          {selectedProject && <a href={selectedProject.url} target='_blank'>Project page {'>'}</a>}
+          {selectedProject && <a href={selectedProject.url} target='_blank' rel='noopener noreferrer'>Project page {'>'}</a>}
         </div>
       </div>
     </div>

@@ -30,7 +30,7 @@ export default function Index() {
             <p className="m-auto text-white text-3xl">Projects</p>
           </div>
         </Link>
-        <a className="mx-4 md:mx-16 my-2 md:my-8 hover:m-2 transition-all duration-200" href="http://github.com/ssebexen" target="_blank">
+        <a className="mx-4 md:mx-16 my-2 md:my-8 hover:m-2 transition-all duration-200" href="http://github.com/ssebexen" target="_blank" rel='noopener noreferrer'>
           <div className="flex items-center w-full h-full bg-violet-600 transition-all hover:rounded-3xl drop-shadow-md">
             <p className="m-auto text-white text-3xl">GitHub</p>
           </div>
