@@ -7,7 +7,7 @@ interface ProjectCarouselTileProps {
 }
 export default function ProjectCarouselTile(props: ProjectCarouselTileProps) {
   return (
-    <div className='flex flex-row flex-0 basis-1/3 items-center border border-[#f7dcd2] rounded-md bg-[#ffffff44]' onClick={() => props.onProjectSelected(props.project)}>
+    <div className='flex flex-row flex-0 basis-1/3 items-center border border-[#f7dcd2] rounded-md bg-[#ffffff44] hover:bg-[#ffffff88] cursor-default' onClick={() => props.onProjectSelected(props.project)}>
       <div className='flex flex-0 w-8 h-8 text-sm justify-center items-center'>
         img
       </div>

@@ -26,6 +26,15 @@ const projects: Project[] = [
     icon: '',
     iconAlt: 'A 3x3 grid',
     url: 'https://sparkly-taiyaki-256b84.netlify.app/'
+  },
+  {
+    id: 'algorithms',
+    name: 'Algorithms',
+    shortDescription: 'Some simple algorithms',
+    longDescription: 'Algorithms are a totally original and unique idea I had where you basically tell the computer how to do something and then it can do it on any arbitrary piece of data that has certain characteristics about its shape.',
+    icon: '',
+    iconAlt: 'Math or something idk',
+    url: 'https://main--unrivaled-seahorse-670786.netlify.app/'
   }
 ];
 
