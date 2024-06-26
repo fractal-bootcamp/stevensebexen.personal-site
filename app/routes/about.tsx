@@ -4,15 +4,13 @@ import { useState } from "react";
 import AboutTab from "~/components/AboutTab";
 import ArtGallery from "~/components/ArtGallery";
 import contentWindows from "~/data/contentWindows";
-
-import { readdirSync } from 'node:fs' // TODO: Fix error thrown
-import { LoaderFunctionArgs } from "@remix-run/node";
 import MusicGallery from "~/components/MusicGallery";
+
+import imageUrls from '~/data/imageUrls.json';
 
 export default function About() {
 
   const [currentTab, setCurrentTab] = useState<number>(0);
-  const loaderData: { imageUrls: string[] } | undefined = useLoaderData();
 
   function clickHandler(tabId: number) {
     setCurrentTab(tabId);
@@ -32,16 +30,10 @@ export default function About() {
       <div className="flex flex-1 overflow-y-auto">
         <div className="flex-1 m-[5%] p-3 overflow-y-auto rounded-xl drop-shadow-md bg-[#ffffff88]">
           {contentWindows[currentTab]}
-          {currentTab === 1 && <ArtGallery imageUrls={loaderData?.imageUrls} />}
+          {currentTab === 1 && <ArtGallery imageUrls={imageUrls} />}
           {currentTab === 2 && <MusicGallery />}
         </div>
       </div>
     </div>
   );
-}
-
-export function loader({ request }:LoaderFunctionArgs) {
-  return {
-    imageUrls: readdirSync('./public/img/art-gallery').map(url => '/img/art-gallery/' + url)
-  };
 }
