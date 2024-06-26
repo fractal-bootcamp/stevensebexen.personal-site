@@ -45,6 +45,6 @@ export function loader({ request }:LoaderFunctionArgs) {
     ? './public/img/art-gallery'
     : './client/imgart-gallery';  // Netlify
   return {
-    imageUrls: readdirSync('./public/img/art-gallery').map(url => '/img/art-gallery/' + url)
+    imageUrls: readdirSync(url).map(url => '/img/art-gallery/' + url)
   };
 }
