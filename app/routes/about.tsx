@@ -5,7 +5,7 @@ import AboutTab from "~/components/AboutTab";
 import ArtGallery from "~/components/ArtGallery";
 import contentWindows from "~/data/contentWindows";
 
-import { readdirSync } from 'node:fs' // TODO: Fix error thrown
+import { readdirSync, existsSync } from 'node:fs' // TODO: Fix error thrown
 import { LoaderFunctionArgs } from "@remix-run/node";
 import MusicGallery from "~/components/MusicGallery";
 
@@ -41,6 +41,9 @@ export default function About() {
 }
 
 export function loader({ request }:LoaderFunctionArgs) {
+  const url = existsSync('./public/img/art-gallery')
+    ? './public/img/art-gallery'
+    : './client/imgart-gallery';  // Netlify
   return {
     imageUrls: readdirSync('./public/img/art-gallery').map(url => '/img/art-gallery/' + url)
   };
